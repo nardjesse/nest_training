@@ -35,7 +35,7 @@ export default {
 
       UploadFileService.upload(formData)
         .then((response) => {
-          this.path = response.data.path;
+          this.path = response.data;
           this.$emit("fileUploaded", this.path);
         })
         .catch((e) => {

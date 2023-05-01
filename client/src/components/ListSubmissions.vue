@@ -27,7 +27,7 @@
 <script>
 import SubmissionService from "@/services/SubmissionService";
 import router from "../router/index";
-import AuthenticationService from "@/services/AuthenticationService.js";
+// import AuthenticationService from "@/services/AuthenticationService.js";
 
 export default {
   name: "ListSubmissions",
@@ -61,14 +61,15 @@ export default {
   },
 
   mounted() {
-    AuthenticationService.checkLogin()
+    this.getSubmissions(this.getUserId());
+    /*AuthenticationService.checkLogin()
       .then(() => {
         this.getSubmissions(this.getUserId());
       })
       .catch((e) => {
         console.log(e);
         this.navigateLoginUser();
-      });
+      });*/
     
   },
 };

@@ -63,7 +63,7 @@
 import UploadFile from "./UploadFile.vue";
 import router from "../router/index";
 import SubmissionService from "@/services/SubmissionService";
-import AuthenticationService from "@/services/AuthenticationService.js";
+// import AuthenticationService from "@/services/AuthenticationService.js";
 
 export default {
   name: "CandidateForm",
@@ -131,14 +131,14 @@ export default {
 
 
   mounted() {
-    AuthenticationService.checkLogin()
+   /* AuthenticationService.checkLogin()
       .then(() => {
         console.log("ok");
       })
       .catch((e) => {
         console.log(e);
         this.navigateLoginUser();
-      });
+      });*/
   },
 };
 </script>

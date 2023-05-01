@@ -3,7 +3,7 @@ import authHeader from "../authenticationHeader";
 
 class SubmissionService {
   getAll(userId) {
-    return http.get(`/candidateProfile/${userId}`, {headers: authHeader()});
+    return http.get(`/submission/${userId}`, {headers: authHeader()});
   }
 
   /* get(id) {
@@ -11,7 +11,7 @@ class SubmissionService {
   } */
 
   create(data) {
-    return http.post("/candidateProfile", data, {headers: authHeader()});
+    return http.post("/submission", data, {headers: authHeader()});
   }
   
 }
